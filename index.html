@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
     <title>Digital Clock</title>
+
+    <!--Java Script-->
+    <script src="main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
-  <body style="background-color: #1B2430; color: #C84B31; font-family: 'Segoe UI Variable Display', 'Arial Narrow', Arial, sans-serif; font-weight: 900; font-size: 20vh; text-align: center; padding-top: 35vh">
+  <body>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
     <div id="clock"></div>
-    <script>
-      setInterval(() => {
-        let date = new Date();
-        let clock = document.getElementById("clock");
-        clock.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-      }, 100);
-    </script>
   </body>
 </html>
